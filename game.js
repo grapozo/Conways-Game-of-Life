@@ -74,6 +74,10 @@ function generateCanvasMatrix() {
     gameState.oldcanvas = canvasMatrix;
 }
 
+/**
+ * Iterates through the canvas and 
+ * verify each cell
+ */
 function iterateCanvas() {
     for (let columns = 0; columns < gameState.numberOfColumns; columns++) {
         for (let rows = 0; rows < gameState.numberOfRows; rows++) {
@@ -102,6 +106,9 @@ function iterateCanvas() {
     gameState.oldCanvas = gameState.currentCanvas;
 }
 
+/**
+ * Counts a cell's neighbors
+ */
 function countNeighbors(column, row, countMiddle) {
     let sum = 0;
     if (column !== 0 && column < gameState.numberOfColumns - 1) {
